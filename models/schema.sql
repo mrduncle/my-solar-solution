@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS project2;
 CREATE DATABASE project2;
 
+use project2;
+
 CREATE TABLE `project2_schema`.`location`
 (
   `id` INT NOT NULL AUTO_INCREMENT,
