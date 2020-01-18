@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  let solar = sequelize.define("solar", {
+  let solar = sequelize.define("Solar", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
