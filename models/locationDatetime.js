@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  let locationDatetime = sequelize.define("locationDatetime", {});
+  let locationDatetime = sequelize.define("LocationDatetime", {});
 
   locationDatetime.associate = function(models) {
     locationDatetime.belongsTo(models.Location, {
