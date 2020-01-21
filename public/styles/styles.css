@@ -1,3 +1,35 @@
-.list-group-item {
-  line-height: 2.5;
+a {
+  margin: 0px 10px;
+  color: rgb(41, 43, 44);
+}
+
+body {
+  background-image: url("../images/sky-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  margin-bottom: 100px;
+}
+
+.bg-custom {
+  background-image: linear-gradient(90deg, #ff6804 0%, #fffb00 100%);
+}
+
+.navbar {
+  margin-bottom: 25px;
+  border-bottom: solid 3px rgb(51, 51, 51, 0.5);
+}
+
+footer {
+  border-top: solid 3px rgb(51, 51, 51, 0.5);
+}
+
+@media (max-width: 380px) {
+  footer {
+    font-size: 15px;
+  }
 }
