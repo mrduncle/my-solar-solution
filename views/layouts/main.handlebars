@@ -1,15 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Home Page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- External Normalize -->
+  <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/54ddb023bd.js"></script>
+
+  <!-- jQuery JS  -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <title>My Solar Solution</title>
 </head>
 
 <body>
+  <!-- Start of Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light bg-custom">
+    <a class="navbar-brand" href="#">My S<i class="fa fa-sun-o" aria-hidden="true"></i>lar S<i class="fa fa-sun-o"
+        aria-hidden="true"></i>luti<i class="fa fa-sun-o" aria-hidden="true"></i>n</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+      <form class="form-inline my-2 my-lg-0">
+        <div class="navRight logOut pull-right" style="display:none">
+          <a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Log out</a>
+        </div>
+        <div class="navRight logIn pull-right">
+          <a href="#"><span><i class="fa fa-sign-in" aria-hidden="true"></i></span>Log in</a>
+        </div>
+        <div class="navRight register pull-right">
+          <a href="#"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span>Register</a>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+
   {{{body}}}
+
+  <!-- Start of Footer -->
+  <footer class="page-footer font-small footer-light bg-light fixed-bottom bg-custom">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      © 2020 Copyright
+      <br />
+      Duncan, Kendrick, Mani + Piotr
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
+  <!-- Empty Form Field Error Modal -->
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalTitle">Error: Missing Form Field</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <!-- Empty Form Field Error Modal Body -->
+          Please fill in all from fields before submitting.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Empty Form Field Error Modal -->
+
+  <!-- Start of Log in Modal -->
+  <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="logInModalLabel">Log in</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <!-- Log in Modal Body -->
+          <form>
+            <div class="form-group">
+              <label for="logInEmail">Email address</label>
+              <input type="email" class="form-control" id="logInEmail" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="logInPassword">Password</label>
+              <input type="password" class="form-control" id="logInPassword" placeholder="Password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Log in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Log in Modal -->
+
+  <!-- Start of Register Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <!-- Register Modal Body -->
+          <form>
+            <div class="form-group">
+              <label for="registerEmail">Email address</label>
+              <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="registerPassword">Password</label>
+              <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Register Modal -->
+
+  <!-- External JavaScript -->
+  <script src="/js/index.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
