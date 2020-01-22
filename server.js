@@ -22,16 +22,11 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-// require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
+// CHANGE TO FALSE BEFORE UPLOADING
 var syncOptions = { force: false };
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
@@ -41,6 +36,69 @@ db.sequelize.sync(syncOptions).then(function() {
       PORT,
       PORT
     );
+
+    // db.solar.bulkCreate([
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    //   {
+    //     brand: 'Sony',
+    //     output: 3.4,
+    //     cost: 2.0,
+    //     life: 1,
+    //   },
+    // ]);
   });
 });
 
