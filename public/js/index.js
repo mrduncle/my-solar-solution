@@ -4,11 +4,15 @@ $(function () {
   $(".userForm").on("submit", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
+    // Empty Form Field Validation
     if ($("#userLocation").val() == "" || $("#userUsage").val() == "" || $("#userOutput").val() == "" || $("#userBrand").val() == "") {
       // Show error modal.
       $("#errorModal").modal("show");
     } else {
       //Grab user data from form field.
+
+      //Clear form fields on Submit
+      $(".userForm")[0].reset();
     }
   });
 
