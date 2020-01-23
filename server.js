@@ -1,11 +1,11 @@
 require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
+let express = require("express");
+let exphbs = require("express-handlebars");
 
-var db = require("./models");
+let db = require("./models");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+let app = express();
+let PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -26,11 +26,11 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // CHANGE TO FALSE BEFORE UPLOADING
-var syncOptions = { force: false };
+let syncOptions = { force: false };
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
