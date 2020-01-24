@@ -12,11 +12,19 @@
               <label for="userLocation">Your location</label>
               <select class="form-control" id="userLocation">
                 <option></option>
-                <option>{{msg}}</option>
-                <option>Mandurah</option>
-                <option>Joondalup</option>
-                <option>Fremantle</option>
+                {{#each locations}}
+                <option>{{this.dataValues.location}}</option>
+                {{/each}}
               </select>
+              <div class="form-group">
+                <label for="brand">Solar system brand</label>
+                <select class="form-control" id="userBrand">
+                  <option></option>
+                  {{#each solar}}
+                <option>{{this.dataValues.brand}}</option>
+                {{/each}}
+                </select>
+              </div>
               <div class="form-group">
                 <label for="userUsage">Average monthly usage in kW (killowatts)</label>
                 <input class="form-control" id="userUsage" type="number" />
@@ -25,20 +33,12 @@
                 <label for="output">Solar system output</label>
                 <select class="form-control" id="userOutput">
                   <option></option>
-                  <option>2kW</option>
-                  <option>3kW</option>
-                  <option>5kW</option>
-                  <option>7kW</option>
+                  {{#each solar}}
+                <option>{{this.dataValues.output}} kwh</option>
+                {{/each}}
                 </select>
               </div>
-              <div class="form-group">
-                <label for="brand">Solar system brand</label>
-                <select class="form-control" id="userBrand">
-                  <option></option>
-                  <option>Taiwan</option>
-                  <option>German</option>
-                </select>
-              </div>
+              
               <button type="submit" class="btn btn-dark mt-2">Submit</button>
             </div>
           </div>
@@ -67,6 +67,7 @@
 <!-- End of Results column -->
 
 <script>
- 
-  console.log('i am js')
+
+
+  
 </script>
