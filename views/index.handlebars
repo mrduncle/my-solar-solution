@@ -1,22 +1,67 @@
 <!-- Start of Form column -->
 <div class="container wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>How it works</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="/images/tellUs.jpg" alt="Your Needs">
+          <div class="card-body">
+            <h5 class="card-title">Tell us your energy needs</h5>
+            <p class="card-text">
+              We are here to help you make an informed decision. Simply tell us a little bit about
+              your location and what you are looking for.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/images/compare.jpg" alt="Comparing Systems">
+          <div class="card-body">
+            <h5 class="card-title">Compare brands and outputs</h5>
+            <p class="card-text">
+              Immediately see solar system costs, and compare outputs. See system lifespan and forecast savings as well.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/images/readyToInstall.jpg" alt="Installed Solar">
+          <div class="card-body">
+            <h5 class="card-title">Select your solar system</h5>
+            <p class="card-text">
+              Once your finished comparing solar systems you will have a better understanding and be ready to begin
+              requesting quotes from installers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-sm-6">
       <div class="card text-center mt-2">
-        <div class="card-header bg-dark text-light">
-          Fill in the form below to see what solar can do for you!
-        </div>
         <form class="container userForm">
           <div class="form-group">
             <div class="card-body">
               <label for="userLocation">Your location</label>
               <select class="form-control" id="userLocation">
                 <option></option>
-                <option>{{msg}}</option>
-                <option>Mandurah</option>
-                <option>Joondalup</option>
-                <option>Fremantle</option>
+                {{#each locations}}
+                <option>{{this.dataValues.location}}</option>
+                {{/each}}
               </select>
+              <div class="form-group">
+                <label for="brand">Solar system brand</label>
+                <select class="form-control" id="userBrand">
+                  <option></option>
+                  {{#each solar}}
+                  <option>{{this.dataValues.brand}}</option>
+                  {{/each}}
+                </select>
+              </div>
               <div class="form-group">
                 <label for="userUsage">Average monthly usage in kW (killowatts)</label>
                 <input class="form-control" id="userUsage" type="number" />
@@ -25,20 +70,12 @@
                 <label for="output">Solar system output</label>
                 <select class="form-control" id="userOutput">
                   <option></option>
-                  <option>2kW</option>
-                  <option>3kW</option>
-                  <option>5kW</option>
-                  <option>7kW</option>
+                  {{#each solar}}
+                  <option>{{this.dataValues.output}} kwh</option>
+                  {{/each}}
                 </select>
               </div>
-              <div class="form-group">
-                <label for="brand">Solar system brand</label>
-                <select class="form-control" id="userBrand">
-                  <option></option>
-                  <option>Taiwan</option>
-                  <option>German</option>
-                </select>
-              </div>
+
               <button type="submit" class="btn btn-dark mt-2">Submit</button>
             </div>
           </div>
@@ -50,14 +87,9 @@
     <!-- Start of Results column -->
     <div class="col-sm-6">
       <div class="card text-center mt-2">
-        <div class="card-header bg-dark text-light">
-          Results
-        </div>
         <div class="container">
-          <div class="form-group">
-            <div class="card-body">
-              <!-- Results Table Here -->
-            </div>
+          <div class="card-body">
+            <!-- Results Table Here -->
           </div>
         </div>
       </div>
@@ -67,6 +99,7 @@
 <!-- End of Results column -->
 
 <script>
- 
-  console.log('i am js')
+
+
+
 </script>
