@@ -36,70 +36,10 @@ db.sequelize.sync(syncOptions).then(function() {
       PORT,
       PORT
     );
-
-    // db.solar.bulkCreate([
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    //   {
-    //     brand: 'Sony',
-    //     output: 3.4,
-    //     cost: 2.0,
-    //     life: 1,
-    //   },
-    // ]);
   });
 });
 
 module.exports = app;
+
+// Dont delete
+// ps aux | grep node
