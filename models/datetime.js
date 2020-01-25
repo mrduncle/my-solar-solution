@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
   let datetime = sequelize.define(
-    "Datetime",
+    "tbldatetimes",
     {
-      datetime: {
+      datetimecol: {
         type: DataTypes.DATE,
         allowNull: false
       },
