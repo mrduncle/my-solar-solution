@@ -1,6 +1,6 @@
 USE project2;
 
-CREATE TABLE `importtable2` (
+CREATE TABLE `importtable` (
   `dateandtime` datetime NOT NULL,
   `locationid` int(11) NOT NULL,
   `location` varchar(45) NOT NULL,
