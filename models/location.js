@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   let location = sequelize.define(
-    "Location",
+    "tbllocations",
     {
       location: {
         type: DataTypes.STRING,
