@@ -8,13 +8,14 @@ BEGIN
     
     SET @locin = (SELECT
 				      id
-				  FROM tbllocation
+				  FROM tbllocations
                   WHERE location = locn);
 	
     SET dolls_yr = (SELECT
 					    SUM(radiation) * 0.18 * solarea / 1000 * 0.24
-	  				FROM tblradiation
-	  				WHERE locationid = @locin);
+	  				FROM tblradiations
+	  				WHERE tbllocationId = @locin);
     
 END$$
 DELIMITER ;
+
