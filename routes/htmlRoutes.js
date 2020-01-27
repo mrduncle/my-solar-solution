@@ -3,7 +3,7 @@ let db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.dllocation.findAll({}).then(function(locationsData) {
+    db.tbllocations.findAll({}).then(function(locationsData) {
       db.Solar.findAll({}).then(function(SolarData) {
         res.render("index", {
           locations: locationsData,
