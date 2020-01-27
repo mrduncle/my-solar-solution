@@ -23,7 +23,7 @@
           <div class="card-body">
             <h5 class="card-title">Compare brands and outputs</h5>
             <p class="card-text">
-              Immediately see solar system costs, and compare outputs. See system lifespan and forecast savings as well.
+              Immediately see solar system costs, and compare outputs. See forecast savings as well.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@
         <form class="container userForm">
           <div class="form-group">
             <div class="card-body">
-              <label for="userLocation">Your location</label>
+              <label for="userLocation">Location nearest to you</label>
               <select class="form-control" id="userLocation">
                 <option></option>
                 {{#each locations}}
@@ -57,9 +57,8 @@
                 <label for="brand">Solar system brand</label>
                 <select class="form-control" id="userBrand">
                   <option></option>
-                  {{#each solar}}
-                  <option>{{this.dataValues.brand}}</option>
-                  {{/each}}
+                  <option>SolarWatt - Made in Germany</option>
+                  <option>CETC Solar - Made is China</option>
                 </select>
               </div>
               <div class="form-group">
@@ -86,9 +85,16 @@
                 <label for="output">Solar system output</label>
                 <select class="form-control" id="userOutput">
                   <option></option>
-                  {{#each solar}}
-                  <option>{{this.dataValues.output}} kwh</option>
-                  {{/each}}
+                  <option>1.5</option>
+                  <option>2</option>
+                  <option>2.5</option>
+                  <option>3</option>
+                  <option>3.5</option>
+                  <option>4</option>
+                  <option>4.5</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
                 </select>
               </div>
 
