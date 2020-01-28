@@ -1,4 +1,3 @@
-DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `calc_savings`(
 	IN locn VARCHAR(45)
     ,IN solarea DECIMAL(3,1)
@@ -15,7 +14,6 @@ BEGIN
 					    SUM(radiation) * 0.18 * solarea / 1000 * 0.24
 	  				FROM tblradiations
 	  				WHERE tbllocationId = @locin);
-    
-END$$
-DELIMITER ;
-
+                    
+	SELECT @dolls_yr;
+END
