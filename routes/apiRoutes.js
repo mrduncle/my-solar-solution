@@ -1,5 +1,6 @@
 const db = require("../models");
 const sequelize = require("sequelize");
+// let userData = require("../public/js/index");
 
 module.exports = function(app) {
   // Get all examples
@@ -21,15 +22,18 @@ module.exports = function(app) {
     });
   });
 
-  db.sequelize
-    .query("Call calc_savings(:param1, :param2, @dolls_yr);", {
-      replacements: {
-        param1: "Alice Springs",
-        param2: 10
-      },
-      type: sequelize.QueryTypes.SELECT
-    })
-    .spread(function(results, metadata) {
-      console.log(results);
-    });
+  app.post("/api/userentry", function(req, res) {
+    db.sequelize
+      .query("Call calc_savings(:param1, :param2, @dolls_yr);", {
+        replacements: {
+          param1: req.body.userLocation,
+          param2: req.body.userArea
+        },
+        type: sequelize.QueryTypes.SELECT
+      })
+      .spread(function(results, metadata) {
+        console.log(results);
+        res.json(results);
+      });
+  });
 };
