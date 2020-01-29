@@ -1,4 +1,4 @@
-<a href="/public/images/mySolarSolution.jpg"><img src="/public/images/mySolarSolution.jpg" title="MySolarSolution" alt="MySolarSolution"></a>
+<a href="https://github.com/MG1982/my-solar-solution/blob/master/public/images/mySolarSolution.jpg?raw=true"><img src="https://github.com/MG1982/my-solar-solution/blob/master/public/images/mySolarSolution.jpg?raw=true" title="MySolarSolution" alt="MySolarSolution"></a>
 
 # My Solar Solution
 
