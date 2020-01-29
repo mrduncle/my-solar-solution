@@ -31,9 +31,9 @@ $(function () {
           let annualGen = parseInt(annualSavings / 0.24);
           console.log(annualGen);
 
-          $("#annual-use").prepend(annualUsage);
-          $("#solar-gen").prepend(annualGen);
-          $("#savings-yr").append(annualSavings);
+          $("#annual-use").text(annualUsage + " kWh");
+          $("#solar-gen").text(annualGen + " kWh");
+          $("#savings-yr").text("$" + annualSavings);
 
           //Clear form fields on Submit
           $(".userForm")[0].reset();
