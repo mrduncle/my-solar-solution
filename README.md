@@ -1,4 +1,4 @@
-<a href="public\images\mySolarSolution.jpg"><img src="public\images\mySolarSolution.jpg" title="MySolarSolution" alt="MySolarSolution"></a>
+<a href="public/images/mySolarSolution.jpg"><img src="public/images/mySolarSolution.jpg" title="MySolarSolution" alt="MySolarSolution"></a>
 
 # My Solar Solution
 
