@@ -25,12 +25,12 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-// CHANGE TO FALSE BEFORE UPLOADING
+// Change to false before uploading
 let syncOptions = { force: false };
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
@@ -40,6 +40,3 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
-
-// Dont delete
-// ps aux | grep node
