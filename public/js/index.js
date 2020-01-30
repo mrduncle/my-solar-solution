@@ -25,18 +25,15 @@ $(function () {
         url: "/api/userentry",
         data: userData,
         success: function (response) {
-          console.log(response[0].dolls_yr);
+          console.log(parseInt(response[0]["@dolls_yr"]));
           let annualUsage = 6 * userData.userUsage;
-          let annualSavings = response[0].dolls_yr;
+          let annualSavings = response[0]["@dolls_yr"];
           let annualGen = parseInt(annualSavings / 0.24);
           console.log(annualGen);
 
           $("#annual-use").text(annualUsage + " kWh");
           $("#solar-gen").text(annualGen + " kWh");
-          $("#savings-yr").text("$" + annualSavings);
-
-          //Clear form fields on Submit
-          $(".userForm")[0].reset();
+          $("#savings-yr").text("$" + parseInt(annualSavings).toFixed(2));
         }
       });
     }
