@@ -34,6 +34,9 @@ $(function () {
           $("#annual-use").text(annualUsage + " kWh");
           $("#solar-gen").text(annualGen + " kWh");
           $("#savings-yr").text("$" + parseInt(annualSavings).toFixed(2));
+
+          //Clear form fields on Submit
+          $(".userForm")[0].reset();
         }
       });
     }
